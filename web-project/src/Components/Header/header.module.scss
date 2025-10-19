@@ -1,165 +1,28 @@
-// // nav bar
-// .nav_bar {
-//   display: flex;
-//   justify-content: space-between;
-//   background-color: #f1f0f0;
-//   align-items: center;
-// }
-
-// .infor {
-//   display: flex;
-// }
-
-// //nav_bar search
-// .search_box {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   width: 100%;
-//   padding: 10px 0;
-// }
-
-// .search_form {
-//   display: flex;
-//   width: 60%;
-//   border: 1px solid #ddd;
-//   border-radius: 4px;
-//   overflow: hidden;
-//   background: white;
-// }
-
-// .search_input {
-//   flex: 1;
-//   padding: 10px 15px;
-//   border: none;
-//   outline: none;
-//   font-size: 14px;
-// }
-
-// .search_button {
-//   background-color: #f1c40f;
-//   border: none;
-//   padding: 10px 15px;
-//   cursor: pointer;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-
-//   img {
-//     width: 18px;
-//     height: 18px;
-//   }
-
-//   &:hover {
-//     background-color: #e0b90e;
-//   }
-// }
-
-// //nv_bar account
-// .account_box {
-//   display: flex;
-//   align-items: center;
-//   gap: 8px;
-//   background-color: #f1f0f0;
-//   padding: 8px 12px;
-//   border-radius: 4px;
-//   font-family: Arial, sans-serif;
-// }
-
-// .account_icon img {
-//   width: 24px;
-//   height: 24px;
-// }
-
-// .account_info {
-//   display: flex;
-//   flex-direction: column;
-//   font-size: 13px;
-//   line-height: 1.4;
-// }
-
-// .login_link {
-//   text-decoration: none;
-//   color: #000;
-//   font-weight: 500;
-// }
-
-// .login_link:hover {
-//   text-decoration: underline;
-// }
-
-// .dropdown {
-//   display: flex;
-//   align-items: center;
-//   color: #333;
-//   cursor: pointer;
-// }
-
-// .arrow {
-//   font-size: 10px;
-//   margin-left: 4px;
-// }
-
-// //nav_bar cart
-
-// .cart_box {
-//   display: flex;
-//   align-items: center;
-//   gap: 6px;
-//   cursor: pointer;
-//   color: #333;
-//   font-size: 15px;
-//   position: relative;
-// }
-
-// .cart_icon {
-//   position: relative;
-
-//   img {
-//     width: 28px;
-//     height: 28px;
-//   }
-
-//   .cart_badge {
-//     position: absolute;
-//     top: -6px;
-//     right: -8px;
-//     background-color: red;
-//     color: white;
-//     font-size: 11px;
-//     font-weight: bold;
-//     border-radius: 50%;
-//     width: 18px;
-//     height: 18px;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//   }
-// }
-
-// .cart_info {
-//   span {
-//     font-size: 15px;
-//     color: #333;
-//   }
-// }
-
-// nav bar tổng thể
 .nav_bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f7f5f5;
-  padding: 10px 20px; // tăng khoảng cách 2 bên để thoáng hơn
+  background-color: #eae6e4;
+  padding: 6px 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  height: 60px;
 }
 
 // logo
 .logo {
-  font-size: 28px;
+  display: flex;
+  align-items: center;
+  font-size: 22px;
   font-weight: bold;
   color: #000;
-  line-height: 1.2;
-  font-family: "Georgia", serif;
+  img {
+    height: 36px; // nếu bạn dùng ảnh logo
+    width: auto;
+  }
 }
 
 // khu vực tìm kiếm
@@ -172,7 +35,7 @@
 
 .search_form {
   display: flex;
-  width: 60%;
+  width: 55%;
   border: 1px solid #ddd;
   border-radius: 6px;
   overflow: hidden;
@@ -181,28 +44,26 @@
 
 .search_input {
   flex: 1;
-  padding: 10px 16px;
+  padding: 6px 10px;
+  font-size: 14px;
   border: none;
   outline: none;
-  font-size: 15px;
 }
 
 .search_button {
   background-color: #f1c40f;
   border: none;
-  padding: 0 20px;
+  padding: 0 14px;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-
   img {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
   }
-
   &:hover {
-    background-color: #e0b90e;
+    background-color: #dcb90d;
   }
 }
 
@@ -210,64 +71,57 @@
 .infor {
   display: flex;
   align-items: center;
-  gap: 24px; // tăng khoảng cách giữa account và cart
+  gap: 18px;
 }
 
 // tài khoản
 .account_box {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 6px 8px;
-  border-radius: 4px;
-  background-color: transparent;
-}
-
-.account_icon img {
-  width: 24px;
-  height: 24px;
-}
-
-.account_info {
-  display: flex;
-  flex-direction: column;
+  gap: 6px;
   font-size: 13px;
-  line-height: 1.4;
   color: #222;
+  cursor: pointer;
+  img {
+    width: 20px;
+    height: 20px;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.login_link {
+  text-decoration: none;
+  color: #000;
 }
 
 // giỏ hàng
 .cart_box {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   cursor: pointer;
-  color: #333;
-  font-size: 15px;
   position: relative;
+  font-size: 14px;
+  img {
+    width: 22px;
+    height: 22px;
+  }
 }
 
-.cart_icon {
-  position: relative;
-
-  img {
-    width: 26px;
-    height: 26px;
-  }
-
-  .cart_badge {
-    position: absolute;
-    top: -6px;
-    right: -8px;
-    background-color: red;
-    color: white;
-    font-size: 11px;
-    font-weight: bold;
-    border-radius: 50%;
-    width: 18px;
-    height: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.cart_badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
